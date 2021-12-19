@@ -1,25 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
-html {
+:root {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 body {
     margin: 0;
+    padding-top: 7.75rem; /*match the beginning of the body to the end of the navbar fixed*/
 }
 
 ul {
     display: flex;
     list-style: none;
     padding-left: 0;
-}
-
-li {
-    margin-right: 0.625rem;
 }
 
 .navbar {
@@ -29,10 +27,11 @@ li {
     align-items: center;
     top: 0;
     left: 0;
-
+    
     width: 100vw;
+    height: 7.75rem;
     padding: 0 1rem;
-
+    
     background-color: #000;
     color: #fff;
 }
@@ -41,7 +40,37 @@ li {
     justify-self: end;
 }
 
+.navbar__links li {
+    font-size: 0.875rem;
+    margin-right: 3rem;
+    text-transform: uppercase;
+}
+
 .navbar__links a {
+    font-weight: 300;
     color: #fff;
     text-decoration: none;
 }
+
+/* hover is one of many pseudo-classes that are used to style elements. hover is used to select elements that users hover their cursor or mouse over*/
+.navbar__links a:hover {
+    color: #ffc500
+}
+
+.logo-studion {
+    font-weight: 900;
+    font-size: 2.375rem;
+    line-height: 1ch; /* Unit ch is relative to the width of the "0" according to the height of the font*/
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.logo-studion__subtitle {
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+.copy--primary {
+    color: #ffc500
+}
+
