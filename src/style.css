@@ -119,6 +119,7 @@ ul {
 }
 
 .btn {
+    cursor: pointer;
     padding: 1.25rem 2.5rem; /*first value for up and down second value for right and left*/
     border: 0.125rem solid #fff;
     border-radius: 1.625rem;
@@ -127,4 +128,13 @@ ul {
     font-size: 0.9375rem;
     font-weight: 700;
     text-transform: uppercase;
+    transition: 0.5s all ease; /*The element 'transition' control the animations between changes of property. First value: time of transition between the value of an property to the other. Second value: what do you want to transitionate. Third value: curve of animation.*/
+}
+
+.btn:hover, 
+.btn:active, 
+.btn:focus /*separate by comma to apply the same code to multiple HTML elements at the same time*/ {
+border-color: var(--color-primary);
+background-color: var(--color-primary);
+color: #fff;
 }
