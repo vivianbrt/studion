@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,8 +7,21 @@
 :root {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    --color-copy: #333;
     --color-primary: #ffc500;
     --default-padding: 1rem;
+    color: var(--color-copy)
+}
+
+header,
+main,
+footer {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 body {
@@ -25,18 +38,21 @@ ul {
 .navbar {
     position: fixed;
     z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar__container {
     display: grid;
     grid-template-columns: 1fr 9fr;
     align-items: center;
-    top: 0;
-    left: 0;
-    
+       
     width: 100vw;
     height: 7.75rem;
     padding: 0 1rem;
-    
-    background-color: #000;
-    color: #fff;
 }
 
 .navbar__links {
@@ -85,7 +101,7 @@ ul {
 
 .slide {
     position: relative;
-    /*height: calc(100vh - 7.75rem);*/
+    height: calc(87vh - 7.75rem);
 }
 
 .slide__backgroud-image {
@@ -127,14 +143,80 @@ ul {
     background: unset;
     font-size: 0.9375rem;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: uppercase; /*CAPS LOCK*/
     transition: 0.5s all ease; /*The element 'transition' control the animations between changes of property. First value: time of transition between the value of an property to the other. Second value: what do you want to transitionate. Third value: curve of animation.*/
 }
 
-.btn:hover, 
+.btn:hover, /*hover state is an initial state for an element*/
 .btn:active, 
-.btn:focus /*separate by comma to apply the same code to multiple HTML elements at the same time*/ {
+.btn:focus,
+.btn--institutional /*separate by comma to apply the same code to multiple HTML elements at the same time*/ {
 border-color: var(--color-primary);
 background-color: var(--color-primary);
 color: #fff;
+}
+
+#counter {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.counter__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-items: center;
+    padding: 4.375rem 1rem;
+}
+
+.counter__container h3 {
+    font-size: 2.1875rem;
+}
+
+.counter__container h3 small {
+    display: block;
+    font-size: 1.25rem;
+}
+
+.institutional {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3.125rem;
+    align-items: center;
+    padding: 4.375rem;
+}
+
+.institutional__image {
+    max-width: 570px;
+}
+
+.institutional__copy {
+    padding: 1.875rem 0;
+}
+
+.institutional__copy h6 {
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.institutional__copy h4 {
+    font-size: 1.5625rem;
+    margin-top: 1rem;
+}
+
+.institutional p {
+    font-family: 'roboto', 'sans-serif';
+    font-size: 1.0625rem;
+    line-height: 1.6875rem;
+    margin-bottom: 0;
+    margin-bottom: 2.5rem;
+}
+
+.btn--institutional:hover {
+    color: var(--color-copy);
+    background: unset;
+    box-shadow: 0 1rem 1rem #0006;
 }
